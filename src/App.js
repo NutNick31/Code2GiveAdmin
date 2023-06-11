@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import UserInfo from './Pages/userInfo'
 import CounsellingInfo from './Pages/CounsellingInfo'
 import Location from './Pages/Location';
+import Results from './Pages/Results';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
            </Route>
            <Route path="/locationinfo">
               <Location />
+           </Route>
+           <Route path="/result">
+              <Results />
            </Route>
 
         </Switch>

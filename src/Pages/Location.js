@@ -3,16 +3,16 @@ import axios from "axios";
 
 const Location = () => {
   const [locationData, setUserLocationData] = useState([]);
-  const getUserData = async () => {
+  const getLocationData = async () => {
     const res = await axios.get(
       "http://localhost:8000/api/location/getlocation/"
     );
-    const data = await res.data;
-    setUserLocationData(res?.data?.UserLocationData);
-    console.log(res?.data?.UserLocationData);
+    // const data = await res.data;
+    setUserLocationData(res?.data?.userLocationData);
+    console.log(locationData);
   };
   useEffect(() => {
-    getUserData();
+    getLocationData();
   }, []);
   return (
     <div className="place">
