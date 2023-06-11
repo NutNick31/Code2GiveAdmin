@@ -3,18 +3,18 @@ import axios from "axios";
 
 const Contact = () => {
   const [counsellingInfo, setCounsellingInfo] = useState([]);
-  const getCounsellingInfo = async () => {
-    const res = await axios.get("http://localhost:8000/api/counselling");
-    const data = res.data;
-    setCounsellingInfo(data);
-    console.log(counsellingInfo);
-  };
-  useEffect(() => {
-    getCounsellingInfo();
-  }, []);
+  // const getCounsellingInfo = async () => {
+  //   const res = await axios.get("http://localhost:8000/api/counselling");
+  //   const data = res.data;
+  //   setCounsellingInfo(data);
+  //   console.log(counsellingInfo);
+  // };
+  // useEffect(() => {
+  //   getCounsellingInfo();
+  // }, []);
   return (
     <div className="contact">
-      <p>Counselling Info</p>
+      <h3>Counselling Info</h3>
       <table>
         <tr>
           <th>Name</th>
@@ -23,7 +23,7 @@ const Contact = () => {
           <th>College</th>
           <th>Age</th>
         </tr>
-        {counsellingInfo?.map((user) => (
+        {/* {counsellingInfo?.map((user) => (
             <tr>
               <td>{user.name}</td>
               <td>{user.email}</td>
@@ -31,7 +31,15 @@ const Contact = () => {
               <td>{user.college}</td>
               <td>{user.age}</td>
             </tr>
-        ))}
+        ))} */}
+
+        <tr>
+          <td>Username</td>
+          <td>Latitude</td>
+          <td>Longitude</td>
+          <td>College</td>
+          <td>College</td>
+        </tr>
       </table>
     </div>
   );
